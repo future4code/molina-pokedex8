@@ -6,7 +6,7 @@ import React, { useState} from 'react';
 import Detalhe from './screens/Detalhe';
 import Pokedex from './screens/Pokedex';
 import Home from './screens/Home';
-import Header from './components/Header';
+
 
 
 
@@ -32,4 +32,4 @@ const Router =()=>{
 </BrowserRouter>
 };
 
-export default Routers;
+export default Router;
