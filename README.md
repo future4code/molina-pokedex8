@@ -1,9 +1,10 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Carlos 
+- David
+- Luis Claudio
+- Samira
 
 Link do Surge: www.link.com.br
 
