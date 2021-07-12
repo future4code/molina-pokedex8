@@ -10,11 +10,11 @@ const goToPokedex = ()=> {
 };
 
 const goToDetalhe = ()=> {
-  history.push("/Pokedex");
+  history.push("/Detalhe");
 };
 
 const goToHome = ()=> {
-    history.push("/Home");
+    history.push("/");
   };
 
 return (
