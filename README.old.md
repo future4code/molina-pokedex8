@@ -1,16 +1,28 @@
-# POKEDEX
+https://user-images.githubusercontent.com/52434685/115599641-3874f700-a2b2-11eb-842f-263b22b00be2.png
+
+ POKEDEX  
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
 
-Link do Surge: www.link.com.br
+- https://github.com/Samorim
+- https://github.com/0rtizD
+- https://github.com/LuisClaudioBoaventura
+-https://github.com/Carlos-Dutra-Azeredo
 
-O que funciona:
-- Item 1
-- Item 2
+Link do Surge: https://sedate-shelf.surge.sh/
+🛠 Tecnologias
+As seguintes ferramentas foram usadas na construção do projeto:
 
-O que não funciona: 
-- Item 3
-- Item 4
+React hooks
+API
+Styled-components
+Bootstrap
+Metodologias Ágeis
+Scrum
+
+✔️ O que funciona
+
+❌ O que não funciona
+
+
+🚧 Em desenvolvimento
