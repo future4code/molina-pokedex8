@@ -1,34 +1,40 @@
-import {BrowserRouter,
-    Switch, 
-    Route
-} from 'react-router-dom';
-import React  from 'react'; 
+import {BrowserRouter, Switch,  Route} from 'react-router-dom';
+import React, { useState } from "react";
 import Detalhe from '../screens/Detalhe';
 import Pokedex from '../screens/Pokedex';
 import Home from '../screens/Home';
+import Header from "../Components/Header"
 
 
+export default function Router() {
+  const [listPokedex, setListPokedex] = useState([]) || [];
+  const [listHome, setListHome] = useState([]) || [];
 
-
-const Router =()=>{
+  return (
+    <BrowserRouter>
+    <Header/>
    
-
-    return (
- <BrowserRouter>
-   <Switch>
-     <Route exact path="/Detalhe">
-       <Detalhe/>
-     </Route>
-     <Route exact path="/Pokedex">
-       <Pokedex/>
-     </Route>
-     <Route exact path="/">
-      <Home/>
-       
-     </Route>
-   </Switch>
-</BrowserRouter>
-    )
-};
-
-export default Router;
+      <Switch>
+        <Route exact path="/">
+          <Home
+            listPokedex={listPokedex}
+            setListPokedex={setListPokedex}
+            listHome={listHome}
+            setListHome={setListHome}
+          />
+        </Route>
+        <Route exact path="/details/:id">
+          <Detalhe />
+        </Route>
+        <Route exact path="/pokedex">
+          <Pokedex
+            listHome={listHome}
+            setListHome={setListHome}
+            listPokedex={listPokedex}
+            setListPokedex={setListPokedex}
+          />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
+}

@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
+import GlobalState from './Global/GlobalState';
+import Router from "./routes/Router"
 
-import Router from './routes/Router.js'
-
-function App() {
+const App = () => {
   return (
+    <GlobalState>
    <Router/>
+   </GlobalState>
   );
 };
 
