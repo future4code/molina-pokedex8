@@ -16,7 +16,7 @@ function Pokedex(props) {
     setListHome(newPokedex);
     listPokedex.splice(index, 1);
 
-    if (listPokedex == 0) {
+    if (listPokedex === 0) {
       history.push("/")
     }
   };
@@ -30,7 +30,7 @@ function Pokedex(props) {
   return (
     <Container>
       <PokemonGrid>
-      {listPokedex == 0 ? <EmptyPokedex><h2 style={{textAlign: "center"}}>A Pokedex está vazia!</h2><h2> <Link className="empty-link" to="/">Adicione alguns pokemons! </Link></h2></EmptyPokedex> : listPokedex.map((pokemon) => {
+      {listPokedex === 0 ? <EmptyPokedex><h2 style={{textAlign: "center"}}>A pokedex esta vazia!</h2><h2> <Link className="empty-link" to="/">Adicione alguns pokemons! </Link></h2></EmptyPokedex> : listPokedex.map((pokemon) => {
         return (
           <PokemonCard>
             <img src={pokemon.sprites.front_default}></img>
@@ -57,7 +57,8 @@ function Pokedex(props) {
 export default Pokedex;
 
 const Container = styled.div`
-  background-image: #F8F4F9;
+  border: 70px solid red;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,6 +66,7 @@ const Container = styled.div`
 `
 
 const PokemonGrid = styled.div `
+  background-color: black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 1rem;
@@ -82,7 +84,6 @@ const PokemonGrid = styled.div `
 const PokemonCard = styled.div `
   display: flex;
   flex-direction: column;
-  border: 1px solid #96031A;
   height: 35vh;
   width: 10vw;
   padding: 1.5rem;
@@ -117,26 +118,32 @@ const ButtonContainer = styled.div `
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  
 `
 
 const Button = styled.button `
- grid-column-start: 2;
+background-color: yellow;
+grid-column-start: 2;
 grid-row-start: 3;
 border-radius: 8px;
 font-size: 1rem;
-border:none;
+border:2px solid blue;
 cursor: pointer;
-border: 1px solid ${props => props.color};
+
 border-bottom: 50%;
-width: 140px;
+width: 124px;
 height:50px;
 padding: 0.35rem; 
 :hover{
     transform: scale(1.2);
     transition: all 0.5s;
+    border:2px solid blue;
+    background-color: yellow;
     background-color: ${props => props.color};
 }
 :active{
+    border:2px solid blue;
+    background-color: yellow;
     background-color: ${props => props.activeColor};
 }
 `
@@ -149,6 +156,6 @@ const EmptyPokedex = styled.div `
   .empty-link {
     text-align: center;
     text-decoration: underline;
-    color: black;
+    color: red;
   }
 `

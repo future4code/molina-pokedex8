@@ -85,7 +85,8 @@ function Home(props) {
 export default Home;
 
 const Container = styled.div`
-  background-image: #F8F4F9;
+  border: 50px solid red;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,6 +94,7 @@ const Container = styled.div`
 `
 
 const PokemonGrid = styled.div `
+  background-color: black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 1rem;
@@ -117,7 +119,7 @@ const PokemonCard = styled.div `
   font-size: 1.3rem;
   align-items: center;
   justify-content: center;
-  background-color: #FDF0D5;
+  background-color: antiquewhite;
   h3{
     text-transform: capitalize;
   }
@@ -149,13 +151,14 @@ const ButtonContainer = styled.div `
 
 
 const Button = styled.button `
- grid-column-start: 2;
+background-color: yellow;
+grid-column-start: 2;
 grid-row-start: 3;
 border-radius: 8px;
 font-size: 1rem;
 border:none;
 cursor: pointer;
-border: 1px solid ${props => props.color};
+border:3px solid blue;
 border-bottom: 50%;
 width: 124px;
 height:50px;

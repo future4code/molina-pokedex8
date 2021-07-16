@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Detalhe from '../screens/Detalhe';
 import Pokedex from '../screens/Pokedex';
 import Home from '../screens/Home';
-import Header from "../Components/Header"
+import Header from "../components/Header"
 
 
 export default function Router() {
