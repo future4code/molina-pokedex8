@@ -18,23 +18,26 @@ export const HeaderContainer = styled.div`
     justify-content: space-between;
     width: 100%;
     height: 80px;
-    background-color: #202020;
     justify-content: center;
     background-color: black;
     padding: 10px 0;
     box-shadow: 2px 3px 3px rgba(0,0,0, 0.4);
-    margin-bottom: 10px;
+    
     `
 
 
 const Botoes = styled.div`
+  border: 2px solid blue;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
-  width: 530px;
+  width: 500px;
+  
+  
 
   button {
+    background-color: yellow;
     height: 50px;
     width: 50%;
   }
@@ -45,10 +48,6 @@ export const Header = () => {
 
 const goToPokedex = ()=> {
   history.push("/Pokedex");
-};
-
-const goToDetalhe = ()=> {
-  history.push("/Detalhe");
 };
 
 const goToHome = ()=> {

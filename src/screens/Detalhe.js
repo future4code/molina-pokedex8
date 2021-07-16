@@ -1,44 +1,23 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import styled from "styled-components";
 
+
 const Container = styled.div`
-  background-image: #F8F4F9;
+  margin-left: 200px;
+  border: 60px solid red;  
+  background-color: black;
+  color: red;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  width: 65%;
+
 `
 
-const ButtonContainer = styled.div `
-  display: flex;
-justify-content: center;
-gap:50px;
-margin: 30px;
-`
 
-const Button = styled.button `
-  grid-column-start: 2;
-grid-row-start: 3;
-border-radius: 8px;
-font-size: 1rem;
-border:none;
-cursor: pointer;
-border: 1px solid ${props => props.color};
-border-bottom: 50%;
-width: 140px;
-height:50px;
-padding: 0.35rem; 
-:hover{
-    transform: scale(1.2);
-    transition: all 0.5s;
-    background-color: ${props => props.color};
-}
-:active{
-    background-color: ${props => props.activeColor};
-}
-`
 
 const ContainerImg = styled.div`
   display: flex;
@@ -66,7 +45,7 @@ function Detalhe() {
 
   useEffect(() => {
     getDetails();
-  }, []);
+  }, []); /*aqui que vai o pokemon kkkk q eu falei q nao sei onde vai acho */
 
   const getDetails = () => {
     axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`).then((response) => {
@@ -108,14 +87,7 @@ function Detalhe() {
           </ContainerImg>
         </ContainerDetails>
       )}
-    <ButtonContainer>
-      <Link to="/">
-        <Button>Ir para Home</Button>
-      </Link>
-      <Link to="/pokedex">
-        <Button>Voltar para pokedex</Button>
-      </Link>
-    </ButtonContainer>
+    
     </Container>
   );
 }
